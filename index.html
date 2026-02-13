@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saints Forward — Building the Future of Spruce Grove Soccer</title>
+    <meta name="description" content="A community initiative to secure dedicated indoor space and professional coaching for the Spruce Grove Saints Soccer Association.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Saints Forward — Building the Future of Spruce Grove Soccer">
+    <meta property="og:description" content="A community initiative to secure dedicated indoor space and professional coaching for SGSA.">
+    <meta property="og:image" content="assets/images/saints-forward-og-image.svg">
+    <meta property="og:url" content="https://saintsforward.ca">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saints Forward — Building the Future of Spruce Grove Soccer">
+    <meta name="twitter:description" content="A community initiative to secure dedicated indoor space and professional coaching for SGSA.">
+    <meta name="twitter:image" content="assets/images/saints-forward-og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/saints-forward-favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'forest-green': '#1B4332',
+                        'gold': '#D4A843',
+                        'warm-white': '#F8F6F0',
+                        'dark-charcoal': '#1A1A2E',
+                        'near-black': '#2D2D2D',
+                        'warm-gray': '#6B7280',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        .hero-gradient {
+            background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(26, 26, 46, 0.85));
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans text-near-black bg-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="assets/images/saints-forward-logo-compact.svg" alt="Saints Forward Logo" class="h-12 w-auto">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#vision" class="text-forest-green hover:text-gold transition-colors font-semibold">The Vision</a>
+                    <a href="#problem" class="text-forest-green hover:text-gold transition-colors font-semibold">The Problem</a>
+                    <a href="#plan" class="text-forest-green hover:text-gold transition-colors font-semibold">The Plan</a>
+                    <a href="#involved" class="text-forest-green hover:text-gold transition-colors font-semibold">Get Involved</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-forest-green hover:text-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#vision" class="block text-forest-green hover:text-gold transition-colors font-semibold">The Vision</a>
+                <a href="#problem" class="block text-forest-green hover:text-gold transition-colors font-semibold">The Problem</a>
+                <a href="#plan" class="block text-forest-green hover:text-gold transition-colors font-semibold">The Plan</a>
+                <a href="#involved" class="block text-forest-green hover:text-gold transition-colors font-semibold">Get Involved</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center text-white overflow-hidden mt-20">
+        <!-- Background (placeholder - replace with actual hero image) -->
+        <div class="absolute inset-0 bg-forest-green">
+            <!-- Note: Replace this div with an actual background image of kids playing indoor soccer -->
+            <!-- <img src="assets/images/hero.jpg" alt="Kids playing soccer" class="w-full h-full object-cover"> -->
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="assets/images/saints-forward-logo-dark-bg.svg" alt="Saints Forward" class="mx-auto mb-8 h-32 w-auto">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">Saints Forward</h1>
+            <p class="text-2xl md:text-3xl mb-8 text-gold font-bold">Building the future of Spruce Grove soccer.</p>
+            <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">A community initiative to secure dedicated indoor space and professional coaching for the Spruce Grove Saints Soccer Association.</p>
+            <a href="#vision" class="inline-block bg-gold text-forest-green px-8 py-4 rounded-lg text-lg font-bold hover:bg-yellow-300 transition-all transform hover:scale-105">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-20 bg-warm-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-forest-green text-center mb-12">What if SGSA had its own home?</h2>
+
+            <div class="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed mb-16">
+                <p>Imagine a dedicated indoor facility where our teams practice year-round on real turf. A place where professional coaching staff set the standard across all age groups. A club that develops players from mini to premier with consistency and quality.</p>
+
+                <p>Picture a community gathering place for tournaments, camps, and events. A facility where our kids aren't competing for field time with three other municipalities, where practice schedules are designed for player development instead of determined by whatever slots happen to be available.</p>
+
+                <p>This isn't a fantasy. Other EMSA clubs have made this happen. Clubs just like ours—community organizations built by volunteers, serving young families in growing Alberta towns. It's our turn.</p>
+            </div>
+
+            <!-- Callout Box -->
+            <div class="bg-gold/20 border-l-4 border-gold p-6 max-w-3xl mx-auto mb-16">
+                <p class="text-xl font-bold text-forest-green text-center">Other EMSA clubs have done this. It's our turn.</p>
+            </div>
+
+            <!-- Two Goals -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Goal 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-3">Goal 1</h3>
+                    <p class="text-lg font-semibold mb-2">A dedicated indoor soccer facility for SGSA</p>
+                    <p class="text-warm-gray">Year-round turf access, consistent practice schedules, and a home for our club to grow.</p>
+                </div>
+
+                <!-- Goal 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-3">Goal 2</h3>
+                    <p class="text-lg font-semibold mb-2">At least two permanent coaching positions</p>
+                    <p class="text-warm-gray">Professional leadership to elevate player development and support our volunteer coaches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-forest-green text-center mb-4">Why Now?</h2>
+            <p class="text-xl text-center text-warm-gray mb-16 max-w-3xl mx-auto">The facts speak for themselves. No opinions, no blame—just the reality.</p>
+
+            <!-- Fact Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Fact 1: The Space Crunch -->
+                <div class="fade-in bg-warm-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-gold mb-4">2</div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">The Space Crunch</h3>
+                    <p class="text-base leading-relaxed">Tri Leisure Centre has just <strong>2 indoor fields</strong> serving <strong>65,000+ people</strong> across three municipalities. SGSA shares this space with Stony Plain, Parkland County, and other sports. Many of our players don't touch turf until their first competitive game.</p>
+                </div>
+
+                <!-- Fact 2: The Growth Curve -->
+                <div class="fade-in bg-warm-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-gold mb-4">21.6%</div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">The Growth Curve</h3>
+                    <p class="text-base leading-relaxed">Spruce Grove's population is <strong>44,575</strong> today, growing at <strong>3.4% per year</strong>. <strong>21.6% are under 14</strong> (well above the national average). Projected indoor registrations: <strong>1,300–2,000+ by 2029</strong>. The space crunch will only get worse.</p>
+                </div>
+
+                <!-- Fact 3: The Money We're Already Spending -->
+                <div class="fade-in bg-warm-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-gold mb-4">$200K</div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">The Money We're Spending</h3>
+                    <p class="text-base leading-relaxed">SGSA spends approximately <strong>$200,000 every year</strong> on Tri Leisure Centre rental. That's <strong>$1M over 5 years</strong>. Zero equity. Zero control. That money could service a loan, fund a dome, and leave room for coaching staff.</p>
+                </div>
+
+                <!-- Fact 4: The Competitive Disadvantage -->
+                <div class="fade-in bg-warm-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-gold mb-4">⚠️</div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">The Competitive Gap</h3>
+                    <p class="text-base leading-relaxed">Most EMSA clubs have more indoor practice time than SGSA. Our teams enter league play with <strong>fewer practices and less turf exposure</strong>. This isn't a coaching problem—it's an <strong>access problem</strong>.</p>
+                </div>
+
+                <!-- Fact 5: The Window of Opportunity -->
+                <div class="fade-in bg-warm-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-gold mb-4">$1.5M</div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">The Window is Open</h3>
+                    <p class="text-base leading-relaxed">Alberta just gave <strong>$1.5M to the Edmonton Soccer Dome</strong> (Feb 2026). Provincial funding appetite is real. CFEP grants (up to $1M) are available. Air-supported domes cost <strong>$2.5M–$6M</strong>—this is achievable.</p>
+                </div>
+
+                <!-- Fact 6: Additional Context -->
+                <div class="fade-in bg-warm-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-gold mb-4">9–15</div>
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">Timeline: Months, Not Years</h3>
+                    <p class="text-base leading-relaxed">An air-supported dome can be operational in <strong>9–15 months</strong> from decision to doors open. This isn't a decade-long dream. Other clubs have done it. The EMSA Soccer Complex secured a <strong>$1/year land lease</strong> from Parkland County. This has been done.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Section -->
+    <section id="plan" class="py-20 bg-forest-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-4">The Plan</h2>
+            <p class="text-xl text-center text-gold mb-16 max-w-3xl mx-auto">This isn't just a wish list. There's a real, researched plan.</p>
+
+            <!-- Goal 1: Dedicated Indoor Facility -->
+            <div class="mb-20">
+                <div class="bg-dark-charcoal rounded-lg p-8 md:p-12">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-2xl font-black text-forest-green">1</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold">Dedicated Indoor Facility</h3>
+                    </div>
+
+                    <div class="space-y-6 text-lg leading-relaxed">
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">What</h4>
+                            <p>An air-supported dome over a full-size turf field, dedicated to SGSA.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">Where</h4>
+                            <p>Spruce Grove or Parkland County (site to be determined). Potential options include placing a dome over the existing Fuhr Sports Park artificial turf field for the fastest, lowest-cost path.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">Cost</h4>
+                            <p><strong>$2.5M–$6M</strong> for a complete dome project (structure + field + site prep). Potentially as low as $2.5M–$4M if over an existing field.</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1 ml-4">
+                                <li>Dome structure: $1.5M–$3.0M</li>
+                                <li>Site preparation: $200K–$500K</li>
+                                <li>Artificial turf (if new): $500K–$1.0M</li>
+                                <li>Heating & HVAC: $200K–$400K</li>
+                                <li>LED lighting: $100K–$200K</li>
+                                <li>Amenities (washrooms, change rooms): $300K–$800K</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">How It Gets Funded</h4>
+                            <p class="mb-2">A realistic funding stack:</p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li><strong>Provincial grants:</strong> $1.0M–$1.5M (CFEP, Active Communities Initiative)</li>
+                                <li><strong>Municipal partnership:</strong> Land lease or in-kind support (as Parkland County did for EMSA at $1/year)</li>
+                                <li><strong>Corporate sponsorship:</strong> Naming rights, signage ($500K–$1M)</li>
+                                <li><strong>Club contribution:</strong> Reserves + registration surcharge</li>
+                                <li><strong>Federal grants:</strong> Community-Building Fund, Green Buildings program</li>
+                                <li><strong>Revenue generation:</strong> Third-party rentals, tournaments, camps, adult leagues</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">Timeline</h4>
+                            <p><strong>9–15 months</strong> from decision to operational. Dome installation is 3–4 months; permitting and site prep are the longer lead items.</p>
+                        </div>
+
+                        <div class="bg-gold/20 border-l-4 border-gold p-6 mt-6">
+                            <h4 class="text-xl font-bold mb-2">Precedent</h4>
+                            <p class="mb-2">This has been done:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>The <strong>EMSA Soccer Complex</strong> secured a <strong>$1/year land lease</strong> from Parkland County</li>
+                                <li>The <strong>Edmonton Soccer Dome</strong> received <strong>$1.5M in provincial funding</strong> in February 2026</li>
+                                <li><strong>Calgary Soccer Centre Dome</strong> used Municipal Sustainability Initiative funding</li>
+                                <li>Multiple Alberta communities have successfully built dome facilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 2: Professional Coaching Staff -->
+            <div>
+                <div class="bg-dark-charcoal rounded-lg p-8 md:p-12">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-2xl font-black text-forest-green">2</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold">Professional Coaching Staff</h3>
+                    </div>
+
+                    <div class="space-y-6 text-lg leading-relaxed">
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">What</h4>
+                            <p>At least <strong>2 full-time coaching positions</strong>—a Technical Director and a Head Coach/Player Development Lead.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">Why</h4>
+                            <p>Volunteer coaches are incredible, but they need support. A professional coaching team sets the standard for training methodology, evaluates and develops players consistently across all age groups, and mentors volunteer coaches so the whole program levels up.</p>
+                            <p class="mt-2">Right now, limited practice time means many players don't touch turf until their first match. Professional coaching can only reach its potential with adequate indoor training space.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">Cost</h4>
+                            <p>Approximately <strong>$120K–$150K per year</strong> for two positions (consistent with Alberta community club norms).</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-bold text-gold mb-2">How It Gets Funded</h4>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>Registration fee structure review</li>
+                                <li>Facility revenue (rental income from third-party use)</li>
+                                <li>Sponsorship and grants</li>
+                                <li>Camps, clinics, and specialized training programs</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gold/20 border-l-4 border-gold p-6 mt-6">
+                            <h4 class="text-xl font-bold mb-2">Precedent</h4>
+                            <p>Edmonton Scottish United, EMSA West, Edmonton Strikers, St. Albert Impact FC, and dozens of other EMSA clubs have paid technical staff. SGSA's own bylaws already establish the Executive Director as a paid position. <strong>This is normal.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="involved" class="py-20 bg-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-forest-green text-center mb-4">Get Involved</h2>
+            <p class="text-xl text-center text-warm-gray mb-16 max-w-3xl mx-auto">This is a community initiative. Here's how you can help make it happen.</p>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+
+                <!-- Option 1: Talk to Other Parents -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">Share This Initiative</h3>
+                    <p class="text-lg mb-4">The first step is awareness. Share this website in your team group chats. Talk to other SGSA parents. Help spread the word.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://saintsforward.ca" target="_blank" class="inline-block bg-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">Share on Facebook</a>
+                        <a href="https://twitter.com/intent/tweet?url=https://saintsforward.ca&text=Saints%20Forward%20—%20Building%20the%20future%20of%20Spruce%20Grove%20soccer" target="_blank" class="inline-block bg-forest-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition">Share on Twitter</a>
+                    </div>
+                </div>
+
+                <!-- Option 2: Attend Board Meetings -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">Attend Board Meetings</h3>
+                    <p class="text-lg mb-4">Show up and ask questions about indoor facility planning. Member engagement matters. Your presence signals that this is a priority for SGSA families.</p>
+                    <p class="text-base text-warm-gray">Check the <a href="https://emsasprucegrove.com" target="_blank" class="text-gold underline hover:text-forest-green">SGSA official website</a> for meeting dates and times.</p>
+                </div>
+
+                <!-- Option 3: Volunteer Your Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-forest-green mb-4">Volunteer Your Skills</h3>
+                    <p class="text-lg mb-4">If you have expertise in construction, real estate, law, finance, grant writing, fundraising, or project management, we need you.</p>
+                    <p class="text-lg font-semibold text-forest-green">Contact: <a href="mailto:hello@saintsforward.ca" class="text-gold underline hover:text-forest-green">hello@saintsforward.ca</a></p>
+                </div>
+
+                <!-- Option 4: For Board Members -->
+                <div class="bg-forest-green text-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">To Our Board</h3>
+                    <p class="text-lg leading-relaxed mb-4">We're with you, not against you. This initiative exists because we believe SGSA can be one of the best clubs in Alberta—and we want to help make that happen.</p>
+                    <p class="text-lg leading-relaxed mb-4">If you'd like to discuss any of the research or plans on this site, we'd welcome the conversation. Let's build this together.</p>
+                    <p class="text-lg font-semibold">Contact: <a href="mailto:hello@saintsforward.ca" class="text-gold underline hover:text-white">hello@saintsforward.ca</a></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-charcoal text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <img src="assets/images/saints-forward-logo-dark-bg.svg" alt="Saints Forward Logo" class="h-16 w-auto mx-auto mb-4">
+                <p class="text-lg mb-2">A community initiative by SGSA parents, coaches, and volunteers.</p>
+                <p class="text-warm-gray text-sm mb-4">Saints Forward is an independent community initiative. It is not an official project of the Spruce Grove Soccer Association Board of Directors.</p>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-wrap justify-center gap-6 mb-6">
+                    <a href="https://emsasprucegrove.com" target="_blank" class="text-gold hover:text-white transition">SGSA Official Website</a>
+                    <a href="https://emsa.ab.ca" target="_blank" class="text-gold hover:text-white transition">EMSA Main</a>
+                    <a href="https://www.sprucegrove.org" target="_blank" class="text-gold hover:text-white transition">City of Spruce Grove</a>
+                </div>
+
+                <div class="text-center text-warm-gray text-sm">
+                    <p>Contact: <a href="mailto:hello@saintsforward.ca" class="text-gold hover:text-white">hello@saintsforward.ca</a></p>
+                    <p class="mt-2">&copy; 2026 Saints Forward. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = 80; // Height of fixed nav
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
