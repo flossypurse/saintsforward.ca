@@ -149,7 +149,7 @@ Tested and working on:
 ## Contact
 
 **Saints Forward Initiative**
-Email: [hello@saintsforward.ca](mailto:hello@saintsforward.ca)
+Email: [contact@saintsforward.ca](mailto:contact@saintsforward.ca)
 
 ---
 
